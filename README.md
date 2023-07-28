@@ -1,1 +1,1 @@
-# E-commerce_django
+# E-commerce Website using Django Framework
