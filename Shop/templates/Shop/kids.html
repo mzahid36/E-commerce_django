@@ -1,0 +1,37 @@
+{% extends 'Shop/base.html' %}
+{% load static %}
+{% block title %}Kids{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="list-group">
+                <a href="{% url 'kid' %}" class="list-group-item list-group-item-action active" aria-current="true">
+                    All Kid's Shoes
+                </a>
+                <a href="{% url 'kidshoes' 'boy' %}" class="list-group-item list-group-item-action">Boy</a>
+                <a href="{% url 'kidshoes' 'girl' %}" class="list-group-item list-group-item-action">Girl</a>
+                <a href="{% url 'kidshoes' 'above' %}" class="list-group-item list-group-item-action">Above 1000 tk</a>
+                <a href="{% url 'kidshoes' 'below' %}" class="list-group-item list-group-item-action">Below 1000 tk</a>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                {% for product in kid %}
+                <div class="col-sm-6 text-center mb-4">
+                    <a href="{% url 'product-detail' product.id %}" class="btn">
+                        <div class="item">
+                            <img src="{{product.product_image.url}}" alt="" height="300" width="300" class="">
+                            <div class="fw-bold">{{product.title}}</div>
+                            <div class="fw-bold">Tk. {{product.discounted_price}} <small
+                                    class="fw-light text-decoration-line-through">{{product.selling_price}}</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

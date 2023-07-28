@@ -1,0 +1,41 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.badge-custom {
+    display: inline-block;
+    padding: 3px;
+    font-size: 11px;
+    border-radius: 0 50em 50em 0;
+    color: #ff0000;
+    font-weight: 600;
+    line-height: 26px;
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    top: 20px;
+    box-shadow: 2px 1px 6px 2px rgba(0, 0, 0, 0.1), 0 4px 4px 0px rgba(0, 0, 0, 0.06) !important;
+}
+.ml-1, .mx-1 {
+    margin-left: 0.25rem!important;
+}
+.mr-0, .mx-0 {
+    margin-right: 0!important;
+}
